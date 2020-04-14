@@ -1,0 +1,25 @@
+zamowienia(id_produktu, nazwa_produktu, id_klienta, nazwa_klienta,
+data_zamowienia, cena_produktu, ilość, VAT, suma_brutto, suma_netto)
+1.
+id_produktu <- nazwa_produktu, cena_produktu, VAT
+id_klienta <- nazwa_klienta
+cena_produktu <- ilość, VAT, suma_brutto, suma_netto, data_zamowienia
+suma_brutto <- VAT, ilość
+suma_netto <- ilość
+
+2.klucze kandydujące
+id_produktu,
+id_klienta,
+
+pomieszczenia(id_pomieszczenia, numer_pomieszczenia, id_budynku,
+powierzchnia, liczba_okien, liczba_drzwi, ulica, miasto, kod_pocztowy)
+3.
+id_pomieszczenia <- numer_pomieszczenia, id_budynku, powierzchnia, liczba_okien, liczba_drzwi
+id_budynku <- ulica, miasto, kod_pocztowy
+liczba_drzwi <- powierzchnia
+ulica <- miasto
+kod_pocztowy <- miasto
+
+klucze kandydujące:
+id_pomieszczenia
+id_budynku
