@@ -1,0 +1,25 @@
+w konsoli CMD
+1.
+C:\Program Files\PostgreSQL\12\bin>pg_dump -U postgres -d firma > C:\Users\faxe\Desktop\backup\firma_dump.sql
+Password:
+lub
+pg_dump -d firma -U postgres –p 5433 -Fc -f firma_dump.bkp
+2.
+
+drop database firma
+
+3.
+C:\Program Files\PostgreSQL\12\bin>psql -U postgres -d firma -1 -f C:\Users\faxe\Desktop\backup\firma_dump.sql
+lub
+pg_restore -U postgres -d firma -p 5433 -Fc firma_dump.bkp
+
+SSMS
+6.
+BACKUP DATABASE AdventureWorks2017
+TO DISK = 'C:\Bazy_danych\AdventureWorks2017_dump.bak'
+WITH FORMAT;
+7.
+CREATE VIEW 
+loginID_department AS SELECT e.LoginID, d.Name FROM AdventureWorks2017.HumanResources.Employee e, AdventureWorks2017.HumanResources.Department d, AdventureWorks2017.HumanResources.EmployeeDepartmentHistory edh
+WHERE edh.BusinessEntityID = e.BusinessEntityID AND edh.DepartmentID = d.DepartmentID;
+
